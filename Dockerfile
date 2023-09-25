@@ -11,9 +11,9 @@ RUN git clone https://github.com/dbsoft42/adsb-data-collector-mongodb.git
 RUN pip install aiohttp motor pymongo python-dateutil dnspython
 
 # Set environment variables
-ENV mongodb_conn_str
-ENV database_name
-ENV dump1090_url
+ENV mongodb_conn_str="temp1"
+ENV database_name="temp2"
+ENV dump1090_url="temp3"
 
 # Copy the config template and modify it
 RUN cp adsb-data-collector-mongodb/config_template.py adsb-data-collector-mongodb/config.py
