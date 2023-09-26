@@ -1,11 +1,6 @@
-# Use the official Python 3 image as the base image
-FROM python:latest
-
-# Set working directory
+FROM jfloff/alpine-python:latest
 WORKDIR /app
-
-# Clone the repository
-RUN git clone https://github.com/dbsoft42/adsb-data-collector-mongodb.git
+ADD https://github.com/dbsoft42/adsb-data-collector-mongodb.git
 
 # Install required Python libraries
 RUN pip install aiohttp motor pymongo python-dateutil dnspython
